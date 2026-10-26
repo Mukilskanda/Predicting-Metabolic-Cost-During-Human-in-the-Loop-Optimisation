@@ -35,8 +35,10 @@ Outputs go to `paper_reproduction/results/` (~2 min in total).
 | EMG only | 0.0157 (1) | 0.0178 | 0.0206 (1) | 0.0200 |
 | *Paper (MATLAB)* | *0.0089 NN* | *0.0089* | *0.0301 NN* | *0.0168* |
 
-This reproduces the paper's main findings: 1-3 neurons are enough, linear regression is as good as the
-network, and EMG beats step data for S1.
+This approximately reproduces the paper's linear-regression baseline (S2 0.0172 vs 0.0168; S1 0.0107 vs 0.0089,
+as fold splits differ on only 180 samples) and its main findings: 1-3 neurons are enough, linear regression is as
+good as the network, and EMG beats step data for S1. The paper's text describes 10-fold CV; this port uses 5-fold,
+matching the authors' released MATLAB code. It is the baseline used in the live demo, not the project's best result.
 
 ## Implementation note: `trainbr`
 

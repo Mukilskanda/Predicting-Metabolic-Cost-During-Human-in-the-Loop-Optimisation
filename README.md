@@ -24,7 +24,7 @@ Human-in-the-Loop Optimization"* (Stanford CS229, 2018).
 | **Paper** reference (linear regression, its own CV) | 0.0089 | 0.0168 |
 | **Ours** best (repeated nested 5-fold CV) | **0.0079** (Ensemble, R² = 0.88) | **0.0109** (SVR, R² = 0.71) |
 | Ours, **unseen day** (leave-one-day-out) | 0.0140 (R² = 0.79, ~12 % error) | 0.0263 (R² = 0.27) |
-| Ours, unseen day **+ 3 mask spot-checks** (calibration) | **0.0138** (Ridge) | **0.0171** (LASSO, −35 %) |
+| Ours, unseen day **+ 3 mask spot-checks** (calibration) | **0.0138** (Ridge) | **0.0171** (LASSO; −35 % vs the best uncalibrated 0.0263) |
 | Measurement-noise floor | 0.0025 | 0.0025 |
 
 Main findings
