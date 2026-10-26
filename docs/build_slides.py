@@ -385,26 +385,26 @@ stat(s, 8.85, 4.95, 3.9, "4 of 16", "EMG electrodes beat all 16 for S2 (unseen-d
      AQUA, big_size=34)
 
 # ================================================================ 12. demo
-s = content_slide("Live demo: interactive dashboard", "Demo",
-                  "Run: streamlit run app/streamlit_app.py. Demo order: (1) Data tab: show the 5-day trend. (2) Predict an "
-                  "unseen day: choose Subject 2, Day 5 (MSE 0.093), then drag the calibration slider to 3: MSE falls to 0.016 "
-                  "and the yellow diamonds show the 3 mask readings. (3) What-if: drag the EMG_R4 slider and watch the predicted cost change. "
-                  "(4) Results tab: leaderboard. Backup: python scripts/predict.py --demo --subject S1")
-pic = image(s, "app_screenshot.jpg", 0.6, 1.55, w=7.6, h=4.65)
-pic.line.color.rgb = RGBColor(0xD0, 0xD5, 0xDD)
-pic.line.width = Pt(1)
-tabs = [("Data", "5-day trajectories, correlations, raw table"),
-        ("Predict an unseen day", "live retraining on 4 days + calibration slider (S2 day 5: 0.093 → 0.016)"),
-        ("What-if simulator", "drag sensor sliders → cost ± uncertainty"),
-        ("Results", "leaderboard for both protocols + all figures"),
-        ("Batch predict", "upload CSV → download predictions")]
-for i, (a, b) in enumerate(tabs):
-    y = 1.6 + i * 0.93
-    chip(s, 8.55, y + 0.05, i + 1)
-    text(s, 9.2, y, 3.6, 0.85, [[(a, {"bold": True, "color": NAVY, "size": 16})], [(b, {"size": 13, "color": INK2})]])
-box(s, 0.6, 6.35, 7.6, 0.5, fill=NAVY, radius=0.15)
-text(s, 0.85, 6.35, 7.2, 0.5, "$  streamlit run app/streamlit_app.py", size=15, color=WHITE, font="Courier New",
-     anchor=MSO_ANCHOR.MIDDLE)
+s = content_slide("Live demo: the code, running", "Demo",
+                  "Open a terminal in the project folder (cd into ML proj). Run the three commands in order. (1) Likhith: the paper "
+                  "reproduction prints linear-regression MSE 0.0107 and R2 0.83 for Subject 1. (2) Mukil: predict.py trains a "
+                  "Gaussian Process on 4 days and predicts each unseen day; errors of about 11-17 %. (3) pytest shows all 10 "
+                  "tests pass. Total under a minute.")
+cmds = [("Paper reproduction", "python paper_reproduction/lin_reg_test.py",
+         ["Linear Regression 5-Fold CV", "Mean MSE: 0.010700", "Mean R² : 0.8349"]),
+        ("Predict unseen days", "python scripts/predict.py --demo --subject S1",
+         ["day      MSE   %err      r", "  1   0.0286  16.9%   0.82", "  2   0.0191  13.8%   0.49",
+          "  3   0.0132  11.5%   0.64", "  4   0.0119  10.9%   0.61", "  5   0.0149  12.2%   0.67"]),
+        ("Automated tests", "python -m pytest -q", ["..........", "10 passed"])]
+for i, (title, cmd, out) in enumerate(cmds):
+    x = 0.6 + i * 4.1
+    chip(s, x, 1.65, i + 1)
+    text(s, x + 0.65, 1.7, 3.2, 0.45, title, size=17, bold=True, color=NAVY)
+    box(s, x, 2.35, 3.85, 3.9, fill=NAVY, radius=0.05)
+    text(s, x + 0.2, 2.5, 3.5, 0.9, "$ " + cmd, size=12, color=ICE, font="Courier New")
+    text(s, x + 0.2, 3.45, 3.5, 2.7, [[(l, {})] for l in out], size=12, color=WHITE, font="Courier New")
+text(s, 0.6, 6.45, 12.1, 0.4, "Run from the project folder:  cd \"ML proj\"   ·   total time under a minute",
+     size=13, color=INK2, italic=True)
 
 # ================================================================ 13. conclusions
 s = prs.slides.add_slide(BLANK)
@@ -442,7 +442,7 @@ text(s, 0.6, 1.2, 12, 1.0, "Thank you, questions?", size=44, color=WHITE, font=H
 text(s, 0.6, 2.35, 12, 0.5, "Code, data, figures and the 2-page write-up are in the private GitHub repository.",
      size=17, color=ICE)
 for i, (who, what) in enumerate([("Mukil Skanda A · PES1UG24CS281", "Extended study: Bayesian-regularised NN, 13-model zoo, nested & "
-                                                 "leave-one-day-out validation, calibration, dashboard, write-up"),
+                                                 "leave-one-day-out validation, calibration, sensor reduction, write-up"),
                                   ("Likhith M · PES1UG24CS282", "Faithful MATLAB → Python port of the paper (paper_reproduction/): "
                                                  "NN vs linear-regression baseline, 4 feature sets, forward selection, GitHub repo")]):
     x = 0.6 + i * 6.2
@@ -451,7 +451,7 @@ for i, (who, what) in enumerate([("Mukil Skanda A · PES1UG24CS281", "Extended s
     text(s, x + 0.3, 4.4, 5.4, 1.3, what, size=15, color=WHITE)
 text(s, 0.6, 6.3, 12, 0.6, "Ref: Krimsky & Ng, CS229 2018 · Zhang et al., Science 2017 · MacKay 1992 · "
      "Rasmussen & Williams 2006", size=12, color=ICE)
-s.notes_slide.notes_text_frame.text = "Mukil: extended study, calibration, dashboard. Likhith: faithful MATLAB-to-Python port and GitHub repo."
+s.notes_slide.notes_text_frame.text = "Mukil: extended study, calibration, sensor reduction. Likhith: faithful MATLAB-to-Python port and GitHub repo."
 
 prs.save(OUT)
 print("wrote", OUT, len(prs.slides), "slides")

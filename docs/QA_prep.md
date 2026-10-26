@@ -35,7 +35,7 @@ Not with this data. Training on S1 and testing on S2 gives MSE 0.152, against 0.
 **Q. How would this be used in practice?**
 As a fast surrogate inside the optimiser. CMA-ES only needs the *ranking* of candidate controllers within a generation: our within-day Spearman ρ ≈ 0.6 for S1. Or use it as a prior in Bayesian optimisation, with occasional mask measurements to correct a day-level offset.
 
-**Q. What did each member do?** Mukil Skanda A (PES1UG24CS281): extended study - from-scratch Bayesian NN, 13-model zoo, nested and leave-one-day-out validation, calibration, sensor reduction, dashboard, write-up. Likhith M (PES1UG24CS282): faithful MATLAB-to-Python port of the paper (paper_reproduction/), NN vs linear-regression baseline, forward selection, GitHub repo.
+**Q. What did each member do?** Mukil Skanda A (PES1UG24CS281): extended study - from-scratch Bayesian NN, 13-model zoo, nested and leave-one-day-out validation, calibration, sensor reduction, write-up. Likhith M (PES1UG24CS282): faithful MATLAB-to-Python port of the paper (paper_reproduction/), NN vs linear-regression baseline, forward selection, GitHub repo.
 
 **Q. Where did the data come from?**
 The processed feature matrix released by the original authors with their CS229 project (Stanford Biomechatronics Lab HILO study). We did not have the raw EMG or force signals; filtering was done upstream by the lab.

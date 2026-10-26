@@ -63,7 +63,7 @@ kinematics, and closed-loop CMA-ES with the surrogate (that would need the cost 
 | Folder | Purpose |
 |---|---|
 | `paper_reproduction/` | **Faithful Python port of the original MATLAB scripts** (one file per `.m` script): 1-hidden-layer network vs. linear regression, 4 feature sets, 5-fold CV. Simple and traceable. See its own [README](paper_reproduction/README.md). |
-| `metacost/` + `scripts/` | **Extended study**: 13 models, nested CV, leave-one-day-out, from-scratch `trainbr`, calibration, sensor reduction, dashboard. |
+| `metacost/` + `scripts/` | **Extended study**: 13 models, nested CV, leave-one-day-out, from-scratch `trainbr`, calibration, sensor reduction. |
 
 The reproduction confirms the paper's numbers (S1 Lin. Reg. 0.0107 vs paper 0.0089; S2 0.0172 vs 0.0168);
 the extended study then improves on them.
@@ -88,7 +88,6 @@ scripts/
   run_improvements.py     follow-up experiments E10-E12 (calibration, cross-subject, sensor reduction)
   make_figures.py         renders every figure in results/figures/
   predict.py              CLI inference / terminal demo
-app/streamlit_app.py      interactive live-demo dashboard
 tests/test_pipeline.py    unit tests (data integrity, Jacobian check, model sanity)
 data/raw/                 original processed data from the study (processed_data.mat)
 data/hilo_metabolic_dataset.csv   the same data as a tidy CSV (written by run_experiments.py)
@@ -124,24 +123,22 @@ python scripts/make_figures.py
 # 4. tests
 python -m pytest -q
 
-# 5. live demo dashboard  ->  http://localhost:8501
-streamlit run app/streamlit_app.py
-
-# 6. terminal demo: train on 4 days, predict the 5th
+# 5. demo: train on 4 days, predict the unseen 5th day
 python scripts/predict.py --demo --subject S1
 python scripts/predict.py --csv data/hilo_metabolic_dataset.csv --subject S2 --out preds.csv
 ```
 
-The results, figures and models are already committed, so the app runs straight after `pip install`.
+The results, figures and the model used by `predict.py` are already committed, so the demo runs straight after `pip install`.
 
-### Demo dashboard tabs
-| Tab | What it shows |
-|---|---|
-| Data | 5-day metabolic trajectories, feature correlations, raw table |
-| Predict an unseen day | retrains live on 4 days and predicts the 5th with a 95 % interval. A **calibration slider** adds *k* mask spot-checks and shows the corrected prediction (e.g. S2 day 5 with k = 3: MSE 0.093 → 0.016) |
-| What-if simulator | move EMG/gait sliders and watch the predicted cost and its uncertainty change |
-| Results | model leaderboard for both CV protocols and every figure |
-| Batch predict | upload a CSV and download predictions |
+## Live demo (commands only)
+
+Run from the project root:
+
+```bash
+python paper_reproduction/lin_reg_test.py       # paper baseline: Lin. Reg. MSE 0.0107, R² 0.83 (S1)
+python scripts/predict.py --demo --subject S1   # train on 4 days, predict each unseen day
+python -m pytest -q                             # 10 tests pass
+```
 
 ## Dataset
 

@@ -166,11 +166,11 @@ story = [
       "<i>within-day rank correlation</i> (what the optimiser actually needs)."),
 
     P("4. Implementation", h),
-    P("Python 3 · NumPy · scikit-learn · Streamlit. Two layers: <font face='Courier'>paper_reproduction/</font>, "
+    P("Python 3 · NumPy · scikit-learn · Matplotlib. Two layers: <font face='Courier'>paper_reproduction/</font>, "
       "a 1:1 port of the paper's MATLAB scripts that reproduces its baseline (S2 Lin. Reg. 0.0172 vs 0.0168); and "
       "<font face='Courier'>metacost/</font> + <font face='Courier'>scripts/</font> (12 experiments, 16 figures, "
-      "10 unit tests incl. a Jacobian check), plus a 5-tab <b>Streamlit dashboard</b> for the live demo "
-      "(live unseen-day retraining with calibration, what-if simulator, leaderboard, batch prediction)."),
+      "10 unit tests incl. a Jacobian check), and a command-line predictor used for the live demo, which trains "
+      "on 4 days and predicts the unseen 5th."),
 
     P("5. Results", h),
     P("<b>Table 1.</b> Cross-validated MSE using all 29 features (bold = best per column).", cap),
