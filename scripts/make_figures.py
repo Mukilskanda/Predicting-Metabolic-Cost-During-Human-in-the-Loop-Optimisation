@@ -115,7 +115,7 @@ for ax, s in zip(axes, ["S1", "S2"]):
     piv = sub.pivot(index="model", columns="protocol", values="MSE").sort_values("random", ascending=False)
     piv = piv[piv.index != "Constant (mean)"]
     yy = np.arange(len(piv))
-    ax.barh(yy + 0.2, piv["random"], height=0.38, color=SUBJ[s], label="Random 5-fold (paper protocol)")
+    ax.barh(yy + 0.2, piv["random"], height=0.38, color=SUBJ[s], label="Repeated nested 5-fold CV")
     ax.barh(yy - 0.2, piv["day"], height=0.38, color=SUBJ[s], alpha=0.45, label="Leave-one-day-out")
     const = sub[(sub.model == "Constant (mean)") & (sub.protocol == "random")].MSE.item()
     ax.axvline(const, color=RED, ls="--", lw=1.4)
@@ -293,7 +293,7 @@ steps = [("Sensors", "EMG x16\nTreadmill force\nAnkle angle\nExo controls"),
          ("Pre-processing", "EMG band-pass,\nrectify, RMS\nper-step medians\nday normalisation"),
          ("29 features", "9 step\n16 EMG\n4 control\n(5 days x 36 cond.)"),
          ("Models", "LASSO / PLS / SVR\nGaussian Process\nBayesian-reg. NN\nEnsemble"),
-         ("Validation", "Nested CV\nRandom 5-fold x5\nLeave-one-day-out\nCross-subject"),
+         ("Validation", "Nested 5-fold x5\nLeave-one-day-out\nCross-subject"),
          ("Output", "Metabolic cost\n± uncertainty\nwithin-day ranking\nfor CMA-ES")]
 cs = [MUTED, VIOLET, AQUA, BLUE, ORANGE, GREEN]
 for i, ((h, b), c) in enumerate(zip(steps, cs)):

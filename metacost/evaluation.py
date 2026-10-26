@@ -26,7 +26,7 @@ def metrics(y, p) -> dict:
 
 
 def splitter(protocol: str, n_repeats: int = 5, seed: int = 0):
-    if protocol == "random":           # the paper's protocol (pooled days, shuffled K-fold)
+    if protocol == "random":           # pooled days, shuffled K-fold (the paper used 10-fold)
         return RepeatedKFold(n_splits=5, n_repeats=n_repeats, random_state=seed)
     if protocol == "day":              # stricter: predict a whole unseen experiment day
         return LeaveOneGroupOut()

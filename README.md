@@ -21,14 +21,14 @@ Human-in-the-Loop Optimization"* (Stanford CS229, 2018).
 | | Subject 1 | Subject 2 |
 |---|---|---|
 | Predict-the-mean baseline MSE | 0.0665 | 0.0365 |
-| **Paper** best (random 5-fold CV) | 0.0089 | 0.0168 |
-| **Ours** best (random 5-fold ×5, nested CV) | **0.0079** (Ensemble, R² = 0.88) | **0.0109** (SVR, R² = 0.71) |
+| **Paper** reference (linear regression, its own CV) | 0.0089 | 0.0168 |
+| **Ours** best (repeated nested 5-fold CV) | **0.0079** (Ensemble, R² = 0.88) | **0.0109** (SVR, R² = 0.71) |
 | Ours, **unseen day** (leave-one-day-out) | 0.0140 (R² = 0.79, ~12 % error) | 0.0263 (R² = 0.27) |
 | Ours, unseen day **+ 3 mask spot-checks** (calibration) | **0.0138** (Ridge) | **0.0171** (LASSO, −35 %) |
 | Measurement-noise floor | 0.0025 | 0.0025 |
 
 Main findings
-1. **Beats the paper** on both subjects (-11 % and -35 % MSE) with a nested, repeated CV protocol, so the improvement is not from tuning on the test folds.
+1. **Lower MSE than the paper's reference scores** on both subjects (0.0079 vs 0.0089; 0.0109 vs 0.0168). The models and CV setups differ (best of 13 models with repeated nested 5-fold vs the paper's linear regression with its own CV), so this is not a like-for-like comparison.
 2. **Random-split CV is optimistic.** Holding out a whole *day* (the realistic deployment case, which the paper names as the ideal test but never runs) roughly doubles the error. Subject 1 still generalises (r = 0.88); Subject 2 does not, because its day-to-day level shifts are not captured by the sensors.
 3. **EMG matters most** for both subjects (grouped permutation importance). The top muscles are stable across 200 LASSO bootstraps.
 4. **Supervised beats unsupervised dimensionality reduction.** One PLS component matches 8 PCA components on Subject 2, which explains the paper's poor PCA result.
@@ -157,7 +157,7 @@ metabolic rate and is dropped, as in the original study, leaving **180 + 179 sam
 ## Methodology (summary)
 
 * **Leakage-free pipelines.** Scaling and hyper-parameter search happen inside each training fold (nested CV).
-* **Two validation protocols.** (a) random 5-fold repeated 5× (paper protocol, comparable numbers); (b) leave-one-day-out (honest generalisation to a new session).
+* **Two validation protocols.** (a) repeated nested 5-fold CV (5 × 5), for comparison with the paper's reference scores; (b) leave-one-day-out (honest generalisation to a new session).
 * **Models.** OLS, LASSO, Ridge, Elastic Net, PLS, kNN, SVR, Random Forest, Extra Trees, Gradient Boosting, Gaussian Process (linear + RBF + noise kernel, gives uncertainty), Bayesian-regularised NN, and an averaging ensemble.
 * **Analyses.** Feature-set ablation, neuron sweep, permutation and LASSO-stability importance, PCA/PLS/forward selection, learning curves, GP calibration, cross-subject transfer, within-day rank correlation (what CMA-ES actually needs).
 
