@@ -1,0 +1,85 @@
+train,test,model,k,strategy,MSE
+S1,S2,Ridge,0,offset,0.04723287541399768
+S1,S2,Ridge,3,offset,0.06165973018085065
+S1,S2,Ridge,3,offset+scale,0.05161535434698805
+S1,S2,Ridge,3,own model on k only,0.04702176052176921
+S1,S2,Ridge,3,mean of k,0.04754816070734226
+S1,S2,Ridge,5,offset,0.057795897226522217
+S1,S2,Ridge,5,offset+scale,0.04812557167731709
+S1,S2,Ridge,5,own model on k only,0.03648477553900389
+S1,S2,Ridge,5,mean of k,0.04234758410702636
+S1,S2,Ridge,10,offset,0.049920973313102954
+S1,S2,Ridge,10,offset+scale,0.040752048437860504
+S1,S2,Ridge,10,own model on k only,0.029835154456705183
+S1,S2,Ridge,10,mean of k,0.03868723243815703
+S1,S2,Ridge,20,offset,0.04879409543549563
+S1,S2,Ridge,20,offset+scale,0.038653771320721377
+S1,S2,Ridge,20,own model on k only,0.022466348980839747
+S1,S2,Ridge,20,mean of k,0.037511019731617135
+S1,S2,Ridge,36,offset,0.04866713128242757
+S1,S2,Ridge,36,offset+scale,0.03674204786092709
+S1,S2,Ridge,36,own model on k only,0.021173359506423062
+S1,S2,Ridge,36,mean of k,0.0366107091472652
+S1,S2,Gaussian Process,0,offset,0.04582662511725543
+S1,S2,Gaussian Process,3,offset,0.06094050947889197
+S1,S2,Gaussian Process,3,offset+scale,0.05306812229819452
+S1,S2,Gaussian Process,3,own model on k only,0.04702176052176921
+S1,S2,Gaussian Process,3,mean of k,0.04754816070734226
+S1,S2,Gaussian Process,5,offset,0.05558800746355673
+S1,S2,Gaussian Process,5,offset+scale,0.04829907269742961
+S1,S2,Gaussian Process,5,own model on k only,0.03648477553900389
+S1,S2,Gaussian Process,5,mean of k,0.04234758410702636
+S1,S2,Gaussian Process,10,offset,0.0483908452209175
+S1,S2,Gaussian Process,10,offset+scale,0.0403012177139111
+S1,S2,Gaussian Process,10,own model on k only,0.029835154456705183
+S1,S2,Gaussian Process,10,mean of k,0.03868723243815703
+S1,S2,Gaussian Process,20,offset,0.047423223582054655
+S1,S2,Gaussian Process,20,offset+scale,0.03869527622954053
+S1,S2,Gaussian Process,20,own model on k only,0.022466348980839747
+S1,S2,Gaussian Process,20,mean of k,0.037511019731617135
+S1,S2,Gaussian Process,36,offset,0.04715541368067093
+S1,S2,Gaussian Process,36,offset+scale,0.03669926693265797
+S1,S2,Gaussian Process,36,own model on k only,0.021173359506423062
+S1,S2,Gaussian Process,36,mean of k,0.0366107091472652
+S2,S1,Ridge,0,offset,0.05502476464841751
+S2,S1,Ridge,3,offset,0.07240578890095044
+S2,S1,Ridge,3,offset+scale,0.07771425265506345
+S2,S1,Ridge,3,own model on k only,0.08661945249343586
+S2,S1,Ridge,3,mean of k,0.08964293866984685
+S2,S1,Ridge,5,offset,0.06686075320288673
+S2,S1,Ridge,5,offset+scale,0.07370513463742552
+S2,S1,Ridge,5,own model on k only,0.04797873289728999
+S2,S1,Ridge,5,mean of k,0.07721920970434197
+S2,S1,Ridge,10,offset,0.060649424766685486
+S2,S1,Ridge,10,offset+scale,0.06533207872023435
+S2,S1,Ridge,10,own model on k only,0.027156018503061236
+S2,S1,Ridge,10,mean of k,0.07261634392648895
+S2,S1,Ridge,20,offset,0.05756291898132325
+S2,S1,Ridge,20,offset+scale,0.06099819808074256
+S2,S1,Ridge,20,own model on k only,0.025913177574711697
+S2,S1,Ridge,20,mean of k,0.06895783530565654
+S2,S1,Ridge,36,offset,0.05675517514626668
+S2,S1,Ridge,36,offset+scale,0.05828231128001053
+S2,S1,Ridge,36,own model on k only,0.012814085774369701
+S2,S1,Ridge,36,mean of k,0.0681529918139037
+S2,S1,Gaussian Process,0,offset,0.05238949564588628
+S2,S1,Gaussian Process,3,offset,0.06775882407160765
+S2,S1,Gaussian Process,3,offset+scale,0.07638009096718756
+S2,S1,Gaussian Process,3,own model on k only,0.08661945249343586
+S2,S1,Gaussian Process,3,mean of k,0.08964293866984685
+S2,S1,Gaussian Process,5,offset,0.0652219794337657
+S2,S1,Gaussian Process,5,offset+scale,0.07011188392072314
+S2,S1,Gaussian Process,5,own model on k only,0.04797873289728999
+S2,S1,Gaussian Process,5,mean of k,0.07721920970434197
+S2,S1,Gaussian Process,10,offset,0.057884388398163136
+S2,S1,Gaussian Process,10,offset+scale,0.06081866467927495
+S2,S1,Gaussian Process,10,own model on k only,0.027156018503061236
+S2,S1,Gaussian Process,10,mean of k,0.07261634392648895
+S2,S1,Gaussian Process,20,offset,0.05475585789783173
+S2,S1,Gaussian Process,20,offset+scale,0.05655211436979969
+S2,S1,Gaussian Process,20,own model on k only,0.025913177574711697
+S2,S1,Gaussian Process,20,mean of k,0.06895783530565654
+S2,S1,Gaussian Process,36,offset,0.054113849835904435
+S2,S1,Gaussian Process,36,offset+scale,0.053930287981696655
+S2,S1,Gaussian Process,36,own model on k only,0.012814085774369701
+S2,S1,Gaussian Process,36,mean of k,0.0681529918139037

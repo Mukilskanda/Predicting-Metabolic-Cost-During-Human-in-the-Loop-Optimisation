@@ -1,0 +1,145 @@
+subject,model,strategy,k,MSE,weight
+S1,Gaussian Process,Spot-checks,0,0.01753280528581043,0.0
+S1,Gaussian Process,Spot-checks,1,0.015305388851698817,0.4043081777214287
+S1,Gaussian Process,Spot-checks,2,0.015073467059351382,0.5555030737569664
+S1,Gaussian Process,Spot-checks,3,0.014197218229177832,0.6383767679645701
+S1,Gaussian Process,Spot-checks,5,0.013558739213588064,0.7303725365471471
+S1,Gaussian Process,Spot-checks,8,0.01276332152238412,0.8007532472061962
+S1,Gaussian Process,Spot-checks (no shrinkage),0,0.01753280528581043,0.0
+S1,Gaussian Process,Spot-checks (no shrinkage),1,0.021302677370713168,1.0
+S1,Gaussian Process,Spot-checks (no shrinkage),2,0.017790283615360468,1.0
+S1,Gaussian Process,Spot-checks (no shrinkage),3,0.015303209820333629,1.0
+S1,Gaussian Process,Spot-checks (no shrinkage),5,0.014011724773924306,1.0
+S1,Gaussian Process,Spot-checks (no shrinkage),8,0.012857197312811347,1.0
+S1,Gaussian Process,Start of session,0,0.01386944714695077,0.0
+S1,Gaussian Process,Start of session,1,0.012072853255773692,0.4043081777214287
+S1,Gaussian Process,Start of session,2,0.012648657598485272,0.5555030737569664
+S1,Gaussian Process,Start of session,3,0.013104315358864149,0.6383767679645701
+S1,Gaussian Process,Start of session,5,0.015531543214985654,0.7303725365471471
+S1,Gaussian Process,Start of session,8,0.016728865119203025,0.8007532472061962
+S1,Gaussian Process,Start of session (no shrinkage),0,0.01386944714695077,0.0
+S1,Gaussian Process,Start of session (no shrinkage),1,0.028363301400771902,1.0
+S1,Gaussian Process,Start of session (no shrinkage),2,0.020707584722675254,1.0
+S1,Gaussian Process,Start of session (no shrinkage),3,0.018704402190851198,1.0
+S1,Gaussian Process,Start of session (no shrinkage),5,0.021384850160375106,1.0
+S1,Gaussian Process,Start of session (no shrinkage),8,0.021223559257561014,1.0
+S1,LASSO,Spot-checks,0,0.02342978905235133,0.0
+S1,LASSO,Spot-checks,1,0.019652432630173428,0.5479347730607126
+S1,LASSO,Spot-checks,2,0.018440207159974006,0.687557204917195
+S1,LASSO,Spot-checks,3,0.01668473623471822,0.7566560232325321
+S1,LASSO,Spot-checks,5,0.015151758204474342,0.8284397242696437
+S1,LASSO,Spot-checks,8,0.013761477318119247,0.8797010413553901
+S1,LASSO,Spot-checks (no shrinkage),0,0.02342978905235133,0.0
+S1,LASSO,Spot-checks (no shrinkage),1,0.022204041774062412,1.0
+S1,LASSO,Spot-checks (no shrinkage),2,0.018720084398096477,1.0
+S1,LASSO,Spot-checks (no shrinkage),3,0.016304633585061838,1.0
+S1,LASSO,Spot-checks (no shrinkage),5,0.0146901513126815,1.0
+S1,LASSO,Spot-checks (no shrinkage),8,0.013543151350716714,1.0
+S1,LASSO,Start of session,0,0.019177678882152265,0.0
+S1,LASSO,Start of session,1,0.013521286314975078,0.5479347730607126
+S1,LASSO,Start of session,2,0.013649935804050564,0.687557204917195
+S1,LASSO,Start of session,3,0.013090298344314365,0.7566560232325321
+S1,LASSO,Start of session,5,0.015936282482682973,0.8284397242696437
+S1,LASSO,Start of session,8,0.01736780810527031,0.8797010413553901
+S1,LASSO,Start of session (no shrinkage),0,0.019177678882152265,0.0
+S1,LASSO,Start of session (no shrinkage),1,0.02945086676693489,1.0
+S1,LASSO,Start of session (no shrinkage),2,0.02294308293871102,1.0
+S1,LASSO,Start of session (no shrinkage),3,0.019150985986527556,1.0
+S1,LASSO,Start of session (no shrinkage),5,0.022541975516275597,1.0
+S1,LASSO,Start of session (no shrinkage),8,0.021493838622176582,1.0
+S1,Ridge,Spot-checks,0,0.014506247128397074,0.0
+S1,Ridge,Spot-checks,1,0.01444714977033926,0.34209645106516207
+S1,Ridge,Spot-checks,2,0.01437834984243426,0.48281939189471756
+S1,Ridge,Spot-checks,3,0.013818683089370625,0.5632852068240417
+S1,Ridge,Spot-checks,5,0.01313533353235819,0.6552971155704904
+S1,Ridge,Spot-checks,8,0.012263783805319834,0.7281524380930445
+S1,Ridge,Spot-checks (no shrinkage),0,0.014506247128397074,0.0
+S1,Ridge,Spot-checks (no shrinkage),1,0.01940626992625278,1.0
+S1,Ridge,Spot-checks (no shrinkage),2,0.016358528374150832,1.0
+S1,Ridge,Spot-checks (no shrinkage),3,0.014205744956798456,1.0
+S1,Ridge,Spot-checks (no shrinkage),5,0.012784602845890508,1.0
+S1,Ridge,Spot-checks (no shrinkage),8,0.01176736605274113,1.0
+S1,Ridge,Start of session,0,0.012022481563937698,0.0
+S1,Ridge,Start of session,1,0.011225882616862378,0.34209645106516207
+S1,Ridge,Start of session,2,0.011821291829772967,0.48281939189471756
+S1,Ridge,Start of session,3,0.011627700056970119,0.5632852068240417
+S1,Ridge,Start of session,5,0.013501968734165598,0.6552971155704904
+S1,Ridge,Start of session,8,0.014337416752432289,0.7281524380930445
+S1,Ridge,Start of session (no shrinkage),0,0.012022481563937698,0.0
+S1,Ridge,Start of session (no shrinkage),1,0.02091590352730511,1.0
+S1,Ridge,Start of session (no shrinkage),2,0.018951602893007694,1.0
+S1,Ridge,Start of session (no shrinkage),3,0.015700708053011322,1.0
+S1,Ridge,Start of session (no shrinkage),5,0.018829615659848815,1.0
+S1,Ridge,Start of session (no shrinkage),8,0.018400970865124804,1.0
+S2,Gaussian Process,Spot-checks,0,0.0459630908813393,0.0
+S2,Gaussian Process,Spot-checks,1,0.033324868301888785,0.6894917470771658
+S2,Gaussian Process,Spot-checks,2,0.024185792171819015,0.8141875575634506
+S2,Gaussian Process,Spot-checks,3,0.022294490072512885,0.8672992768786424
+S2,Gaussian Process,Spot-checks,5,0.02131409010576996,0.9155253308961957
+S2,Gaussian Process,Spot-checks,8,0.019759877816750437,0.9453156227301911
+S2,Gaussian Process,Spot-checks (no shrinkage),0,0.0459630908813393,0.0
+S2,Gaussian Process,Spot-checks (no shrinkage),1,0.03932881365792798,1.0
+S2,Gaussian Process,Spot-checks (no shrinkage),2,0.025023186951564837,1.0
+S2,Gaussian Process,Spot-checks (no shrinkage),3,0.022488295270669027,1.0
+S2,Gaussian Process,Spot-checks (no shrinkage),5,0.02138279420751879,1.0
+S2,Gaussian Process,Spot-checks (no shrinkage),8,0.019888124848559934,1.0
+S2,Gaussian Process,Start of session,0,0.04579611520898632,0.0
+S2,Gaussian Process,Start of session,1,0.038036094074611115,0.6894917470771658
+S2,Gaussian Process,Start of session,2,0.03480537569952367,0.8141875575634506
+S2,Gaussian Process,Start of session,3,0.0313130752349431,0.8672992768786424
+S2,Gaussian Process,Start of session,5,0.02542264117687345,0.9155253308961957
+S2,Gaussian Process,Start of session,8,0.023468561237566098,0.9453156227301911
+S2,Gaussian Process,Start of session (no shrinkage),0,0.04579611520898632,0.0
+S2,Gaussian Process,Start of session (no shrinkage),1,0.044369303713963214,1.0
+S2,Gaussian Process,Start of session (no shrinkage),2,0.03495440822684678,1.0
+S2,Gaussian Process,Start of session (no shrinkage),3,0.031193587656821575,1.0
+S2,Gaussian Process,Start of session (no shrinkage),5,0.024784884256021128,1.0
+S2,Gaussian Process,Start of session (no shrinkage),8,0.023479511702904642,1.0
+S2,LASSO,Spot-checks,0,0.028045521481752534,0.0
+S2,LASSO,Spot-checks,1,0.025205501113365246,0.6774846061038317
+S2,LASSO,Spot-checks,2,0.01839015044527117,0.8046844522609
+S2,LASSO,Spot-checks,3,0.01706213354352131,0.8597049560110275
+S2,LASSO,Spot-checks,5,0.0164870923654627,0.9101855513601922
+S2,LASSO,Spot-checks,8,0.01571324175029804,0.9416439547477811
+S2,LASSO,Spot-checks (no shrinkage),0,0.028045521481752534,0.0
+S2,LASSO,Spot-checks (no shrinkage),1,0.029677106882847692,1.0
+S2,LASSO,Spot-checks (no shrinkage),2,0.01919900591708993,1.0
+S2,LASSO,Spot-checks (no shrinkage),3,0.01732182890220652,1.0
+S2,LASSO,Spot-checks (no shrinkage),5,0.016677375882060558,1.0
+S2,LASSO,Spot-checks (no shrinkage),8,0.01581172389627772,1.0
+S2,LASSO,Start of session,0,0.02779243844032527,0.0
+S2,LASSO,Start of session,1,0.02863585842824532,0.6774846061038317
+S2,LASSO,Start of session,2,0.027669797345507702,0.8046844522609
+S2,LASSO,Start of session,3,0.021804222305973443,0.8597049560110275
+S2,LASSO,Start of session,5,0.018202991049697925,0.9101855513601922
+S2,LASSO,Start of session,8,0.016044101122430498,0.9416439547477811
+S2,LASSO,Start of session (no shrinkage),0,0.02779243844032527,0.0
+S2,LASSO,Start of session (no shrinkage),1,0.03683201346891747,1.0
+S2,LASSO,Start of session (no shrinkage),2,0.03088626592020873,1.0
+S2,LASSO,Start of session (no shrinkage),3,0.022711320850355887,1.0
+S2,LASSO,Start of session (no shrinkage),5,0.017825930107084755,1.0
+S2,LASSO,Start of session (no shrinkage),8,0.015839740867000015,1.0
+S2,Ridge,Spot-checks,0,0.03622784988608286,0.0
+S2,Ridge,Spot-checks,1,0.02856761439605431,0.6941354596909879
+S2,Ridge,Spot-checks,2,0.019255252054533857,0.8170838352710807
+S2,Ridge,Spot-checks,3,0.01820983801787018,0.8693677612572064
+S2,Ridge,Spot-checks,5,0.017521953911673327,0.9168292153260256
+S2,Ridge,Spot-checks,8,0.016459699988317183,0.9461503455919317
+S2,Ridge,Spot-checks (no shrinkage),0,0.03622784988608286,0.0
+S2,Ridge,Spot-checks (no shrinkage),1,0.033882635899169,1.0
+S2,Ridge,Spot-checks (no shrinkage),2,0.019982215433261598,1.0
+S2,Ridge,Spot-checks (no shrinkage),3,0.018532121997627833,1.0
+S2,Ridge,Spot-checks (no shrinkage),5,0.01770422988462893,1.0
+S2,Ridge,Spot-checks (no shrinkage),8,0.016596260442210596,1.0
+S2,Ridge,Start of session,0,0.036942582747130866,0.0
+S2,Ridge,Start of session,1,0.03254413447655598,0.6941354596909879
+S2,Ridge,Start of session,2,0.030450455374025305,0.8170838352710807
+S2,Ridge,Start of session,3,0.027090966082722934,0.8693677612572064
+S2,Ridge,Start of session,5,0.02162139786304041,0.9168292153260256
+S2,Ridge,Start of session,8,0.019766528129406914,0.9461503455919317
+S2,Ridge,Start of session (no shrinkage),0,0.036942582747130866,0.0
+S2,Ridge,Start of session (no shrinkage),1,0.04085783594994481,1.0
+S2,Ridge,Start of session (no shrinkage),2,0.03278036417804225,1.0
+S2,Ridge,Start of session (no shrinkage),3,0.028133951659562027,1.0
+S2,Ridge,Start of session (no shrinkage),5,0.021173040578296054,1.0
+S2,Ridge,Start of session (no shrinkage),8,0.019650374253703397,1.0

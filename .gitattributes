@@ -1,0 +1,10 @@
+# Normalise line endings for text files
+* text=auto
+
+# Binary files: never convert line endings (prevents corrupted PDFs, slides, images, models)
+*.pdf     binary
+*.pptx    binary
+*.png     binary
+*.jpg     binary
+*.mat     binary
+*.joblib  binary
