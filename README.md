@@ -35,11 +35,11 @@ Main findings
 5. **One model per person.** Training on one subject and testing on the other is *worse than predicting the mean*. Subject-wise z-scoring helps a lot but is not enough.
 6. **Small networks only.** Our re-implementation of MATLAB's `trainbr` picks 1-2 hidden neurons, consistent with the paper's "no benefit beyond 3".
 7. **More data would help.** Subject 1's learning curve is still falling at 144 training samples (0.0155 → 0.0088 for the GP).
-8. **Fixes that work without new data** (see *Improvements* below): 3 mask spot-checks per session plus an empirical-Bayes offset halve Subject 2's unseen-day error, and 4 well-chosen EMG electrodes beat all 16 for Subject 2.
+8. **Fixes needing very few extra measurements** (see the *Improvements* section below): 3 mask spot-checks per session plus an empirical-Bayes offset halve Subject 2's unseen-day error, and 4 well-chosen EMG electrodes beat all 16 for Subject 2.
 
-## Improvements: fixing the weaknesses (`scripts/run_improvements.py`)
+## Improvements: reducing unseen-day error with 3 mask spot-checks (`scripts/run_improvements.py`)
 
-The first round exposed three weaknesses. Follow-up experiments E10-E12 test fixes that need no new data:
+The first round exposed three weaknesses. Follow-up experiments E10-E12 test fixes that need no new subjects or sensors (calibration uses 3 extra mask readings per session):
 
 | Weakness | Fix tested | Result |
 |---|---|---|
